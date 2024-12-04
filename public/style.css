@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap");
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 auto;
+}
+
+main {
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+
+.judul {
+  text-decoration: none;
+  color: black;
+}
+
+.border {
+  border: 1px solid orange;
+  background-color: orange;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.nav-item {
+  font-size: 18px;
+}
+
+.nav-link {
+  color: white;
+}
+
+footer {
+  background-color: rgb(120, 60, 90);
+  height: 150px;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  margin-bottom: 0px;
+  padding-top: 30px;
+}
+
+.w-10{
+  width: 10%!important;
+}
+
+.w-14{
+  width: 14%!important;
+}
+
+.w-60{
+  width: 60%!important;
+}
+
+.w-90{
+  width: 90%!important;
+}
+
+.w-95{
+  width: 95%!important;
+}
+
+.slick-arrow{
+    background-color: black; /* Red background */
+    border-radius: 50%; /* Make it circular */
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+.slick-arrow:hover{
+    background-color: grey; /* Red background */
+}
+
+.w-80{
+  width: 80%!important;
+}
+
+.w-20{
+  width: 20%!important;
+}
+
+.h-100px{
+  max-height: 500px;
+}
+
+.popoff{
+  transition: filter 0.3s ease;
+}
+
+.popoff:hover {
+  filter: brightness(0.7);
+}
+
+.product-card {
+  /* height: 300px; Fixed height */
+  /* display: flex;
+  flex-direction: column; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  /* border-radius: 10px; /* Rounded corners */
+  /* overflow: hidden;
+  position: relative; /* For absolute positioning of hover elements */
+  /* background-color: white; */ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Light shadow */
+}
+
+/* Hover effect mimicking Shopee */
+.product-card:hover {
+  transform: translateY(-5px) scale(1.02); /* Slight upward movement & scaling */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.add-cart{
+  position: absolute;
+  bottom: 5px;
+  right: 5%;
+  display: none;
+  border-radius: 50%;
+
+}
+
+.product-card:hover .add-cart{
+  display:block;
+}
+
+.carousel-caption {
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+@media (max-width: 1000px) {
+  body {
+      overflow-x: scroll; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent wrapping of content */
+      min-width: 1000px; /* Ensure the content width is at least 1000px */
+  }
+}
