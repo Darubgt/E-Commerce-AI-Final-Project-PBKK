@@ -25,6 +25,17 @@ class SearchController extends Controller
         return view('searched', compact('produk'));
     }
 
+    public function category($id){
+        $produk = Produk::where('item_id_item', $id)->get();
+        return view("searched", compact( "produk"));
+    }
+
+    /**
+     * Search products by image AI
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public static function imageSearchAI (Request $request){
 
         $file = $request->file('file');
