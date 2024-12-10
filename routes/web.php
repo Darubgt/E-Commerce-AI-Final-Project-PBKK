@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\adminmiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
@@ -26,6 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [ProductController::class, 'showCart'])->name('product.carthome');
     Route::post('/deleterowcart', [ProductController::class, 'deleteCart'])->name('product.deletecart');
     Route::get('/payment', [ProductController::class, 'deleteAllCart'])->name('product.payment');
+});
+
+Route::middleware(adminmiddleware::class)->group(function () {
+    
 });
 
 require __DIR__.'/auth.php';
